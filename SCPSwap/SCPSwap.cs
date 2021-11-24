@@ -21,7 +21,6 @@ namespace ScpSwap
 			Handlers.Server.RoundStarted += Handler.OnRoundStart;
 			Handlers.Server.RoundEnded += Handler.OnRoundEnd;
 			Handlers.Server.RestartingRound += Handler.OnRoundRestart;
-			Handlers.Server.SendingConsoleCommand += Handler.OnConsoleCommand;
 		}
 
 		public override void OnDisabled()
@@ -30,7 +29,6 @@ namespace ScpSwap
 			Handlers.Server.RoundStarted -= Handler.OnRoundStart;
 			Handlers.Server.RoundEnded -= Handler.OnRoundEnd;
 			Handlers.Server.RestartingRound -= Handler.OnRoundRestart;
-			Handlers.Server.SendingConsoleCommand -= Handler.OnConsoleCommand;
 			Handler = null;
 		}
 

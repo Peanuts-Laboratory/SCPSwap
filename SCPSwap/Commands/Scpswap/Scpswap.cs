@@ -85,7 +85,7 @@ namespace ScpSwap.Commands.ScpSwapCommand
 			}
 			if (EventHandlers.plugin.Config.SwapAllowNewScps)
 			{
-				ply.ReferenceHub.characterClassManager.SetPlayersClass(role, ply.ReferenceHub.gameObject);
+				ply.SetRole(role);
 				response = "Could not find a player to swap with, you have been made the specified SCP.";
 				return false;
 			}
