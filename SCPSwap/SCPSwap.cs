@@ -9,8 +9,8 @@ namespace ScpSwap
 		public EventHandlers Handler { get; private set; }
 		public override string Name => nameof(ScpSwap);
 		public override string Author => "Originally written by Cyanox, modifications by KoukoCocoa & Thomasjosif, Maintined by EsserGaming";
-		public override Version Version { get; } = new Version(1, 0, 2);
-		public override Version RequiredExiledVersion { get; } = new Version(4, 2, 0);
+		public override Version Version { get; } = new Version(1, 0, 3);
+		public override Version RequiredExiledVersion { get; } = new Version(4, 2, 3);
 
 		public ScpSwap() { }
 
