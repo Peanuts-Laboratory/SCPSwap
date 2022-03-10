@@ -74,8 +74,8 @@ namespace ScpSwap
 		{
 			source.ReferenceHub.characterClassManager.TargetConsolePrint(source.ReferenceHub.scp079PlayerScript.connectionToClient, "Swap successful!", "green");
 
-			RoleType sRole = source.Role;
-			RoleType dRole = dest.Role;
+			RoleType sRole = source.Role.Type;
+			RoleType dRole = dest.Role.Type;
 
 			Vector3 sPos = source.Position;
 			Vector3 dPos = dest.Position;
@@ -83,11 +83,11 @@ namespace ScpSwap
 			float sHealth = source.Health;
 			float dHealth = dest.Health;
 
-			source.Role = dRole;
+			source.Role.Type = dRole;
 			source.Position = dPos;
 			source.Health = dHealth;
 
-			dest.Role = sRole;
+			dest.Role.Type = sRole;
 			dest.Position = sPos;
 			dest.Health = sHealth;
 
@@ -136,7 +136,7 @@ namespace ScpSwap
 			if (plugin.Config.DisplayStartMessage)
 			{
 				foreach (Player ply in Player.List)
-					if (ply.Role.IsSCP())
+					if (ply.Role.Team == Team.SCP)
 						ply.Broadcast(plugin.Config.StartMessageTime, plugin.Config.DisplayMessageText);
 			}
 		}

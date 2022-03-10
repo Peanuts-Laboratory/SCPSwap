@@ -57,7 +57,7 @@ namespace ScpSwap.Commands.ScpSwapCommand
 				return false;
 			}
 
-			if (!(ply.Team == Team.SCP))
+			if (!(ply.Role.Team == Team.SCP))
 			{
 				response = "You're not an SCP, why did you think that would work.";
 				return false;
